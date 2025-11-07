@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: emaillistapp
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    healthCheckPath: /
+
+
+
