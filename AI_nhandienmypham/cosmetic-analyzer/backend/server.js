@@ -110,7 +110,27 @@ app.post("/analyze", async (req, res) => {
             }]
         };
 
-        const response = await fetch(apiUrl, {
+        // Helper function for retrying fetch
+        const fetchWithRetry = async (url, options, retries = 3, backoff = 1000) => {
+            try {
+                const response = await fetch(url, options);
+                if (response.status === 429 && retries > 0) {
+                    console.warn(`⚠️ API Rate Limit (429). Retrying in ${backoff}ms... (${retries} left)`);
+                    await new Promise(r => setTimeout(r, backoff));
+                    return fetchWithRetry(url, options, retries - 1, backoff * 2);
+                }
+                return response;
+            } catch (err) {
+                if (retries > 0) {
+                    console.warn(`⚠️ Network error. Retrying in ${backoff}ms... (${retries} left)`);
+                    await new Promise(r => setTimeout(r, backoff));
+                    return fetchWithRetry(url, options, retries - 1, backoff * 2);
+                }
+                throw err;
+            }
+        };
+
+        const response = await fetchWithRetry(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -244,7 +264,27 @@ app.post("/chat", async (req, res) => {
             }
         };
 
-        const response = await fetch(apiUrl, {
+        // Helper function for retrying fetch
+        const fetchWithRetry = async (url, options, retries = 3, backoff = 1000) => {
+            try {
+                const response = await fetch(url, options);
+                if (response.status === 429 && retries > 0) {
+                    console.warn(`⚠️ API Rate Limit (429). Retrying in ${backoff}ms... (${retries} left)`);
+                    await new Promise(r => setTimeout(r, backoff));
+                    return fetchWithRetry(url, options, retries - 1, backoff * 2);
+                }
+                return response;
+            } catch (err) {
+                if (retries > 0) {
+                    console.warn(`⚠️ Network error. Retrying in ${backoff}ms... (${retries} left)`);
+                    await new Promise(r => setTimeout(r, backoff));
+                    return fetchWithRetry(url, options, retries - 1, backoff * 2);
+                }
+                throw err;
+            }
+        };
+
+        const response = await fetchWithRetry(apiUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(requestBody)
@@ -253,7 +293,7 @@ app.post("/chat", async (req, res) => {
         if (!response.ok) {
             const errorData = await response.text();
             console.error("Chat API Error:", errorData);
-            throw new Error(`API returned ${response.status}`);
+            throw new Error(`API returned ${response.status}: ${errorData}`);
         }
 
         const data = await response.json();

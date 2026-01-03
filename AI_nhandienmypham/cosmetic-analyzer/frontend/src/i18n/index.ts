@@ -68,6 +68,7 @@ const resources = {
                     title2: 'bạn đang dùng',
                     subtitle: 'Chụp ảnh bảng thành phần, AI sẽ phân tích độ an toàn và đưa ra khuyến nghị phù hợp với làn da của bạn.',
                     cta: 'Phân tích ngay',
+                    secondaryCta: 'Tìm hiểu thêm',
                 },
                 stats: {
                     ingredients: 'Thành phần đã phân tích',
@@ -77,7 +78,7 @@ const resources = {
                 features: {
                     title: 'Tại sao chọn SkinLab AI?',
                     subtitle: 'Công nghệ AI tiên tiến giúp bạn đọc hiểu thành phần mỹ phẩm một cách dễ dàng',
-                    smart: {
+                    analysis: {
                         title: 'Nhận diện thông minh',
                         desc: 'Chụp ảnh bảng thành phần, AI sẽ tự động đọc và phân tích từng ingredient.',
                     },
@@ -123,6 +124,22 @@ const resources = {
                     subtitle: 'Không cần đăng ký, không giới hạn số lần sử dụng. Chỉ cần upload ảnh và nhận kết quả.',
                     button: 'Thử ngay',
                 },
+                tech: {
+                    title: 'Sức mạnh từ AI tiên tiến',
+                    subtitle: 'Mô hình ngôn ngữ lớn được huấn luyện trên hàng triệu dữ liệu',
+                    f1: 'Nhận diện văn bản chính xác 99%',
+                    f2: 'Phân tích ngữ cảnh thông minh',
+                    f3: 'Cập nhật dữ liệu y khoa liên tục',
+                },
+                faq: {
+                    title: 'Câu hỏi thường gặp',
+                    q1: 'Độ chính xác của AI là bao nhiêu?',
+                    a1: 'Hệ thống sử dụng Gemini Pro Vision với độ chính xác cao, tuy nhiên kết quả chỉ mang tính tham khảo.',
+                    q2: 'Tôi có cần đăng ký tài khoản không?',
+                    a2: 'Không, bạn có thể sử dụng các tính năng cơ bản hoàn toàn miễn phí mà không cần đăng nhập.',
+                    q3: 'Dữ liệu ảnh của tôi có được bảo mật?',
+                    a3: 'Chúng tôi không lưu trữ ảnh của bạn sau khi phân tích. Dữ liệu được xử lý ẩn danh.',
+                },
             },
             // Analyzer page
             analyzer: {
@@ -146,11 +163,9 @@ const resources = {
                     title: 'Phân tích thất bại',
                 },
                 result: {
-                    title: 'Kết quả phân tích',
-                    points: 'điểm',
                     score: 'Điểm đánh giá',
                     scoreDesc: 'Mức độ an toàn và chất lượng tổng thể',
-                    topIngredients: 'Thành phần chính (nồng độ cao nhất)',
+                    topIngredients: 'Top thành phần (Nồng độ cao nhất)',
                     suitableFor: 'Phù hợp cho',
                     strengths: 'Điểm mạnh',
                     usageNotes: 'Lưu ý khi sử dụng',
@@ -161,13 +176,8 @@ const resources = {
                     notable: 'Thành phần nổi bật',
                     fullList: 'Danh sách đầy đủ thành phần',
                     ingredients: 'thành phần',
-                    ingredient: 'Thành phần',
-                    function: 'Công dụng',
-                    safety: 'An toàn',
-                    comedogenic: 'Gây mụn',
                 },
             },
-            lang: 'vi',
             // Knowledge page
             knowledge: {
                 title: 'Kiến thức làm đẹp',
@@ -294,6 +304,7 @@ const resources = {
                     title2: 'you are using',
                     subtitle: 'Take a photo of the ingredient list, AI will analyze safety and provide recommendations for your skin.',
                     cta: 'Analyze Now',
+                    secondaryCta: 'Learn More',
                 },
                 stats: {
                     ingredients: 'Ingredients analyzed',
@@ -303,7 +314,7 @@ const resources = {
                 features: {
                     title: 'Why choose SkinLab AI?',
                     subtitle: 'Advanced AI technology helps you understand cosmetic ingredients easily',
-                    smart: {
+                    analysis: {
                         title: 'Smart Recognition',
                         desc: 'Take a photo of ingredients, AI will automatically read and analyze each one.',
                     },
@@ -349,6 +360,22 @@ const resources = {
                     subtitle: 'No registration required, unlimited uses. Just upload a photo and get results.',
                     button: 'Try Now',
                 },
+                tech: {
+                    title: 'Powered by Advanced AI',
+                    subtitle: 'Large language model trained on millions of data points',
+                    f1: '99% accurate text recognition',
+                    f2: 'Smart context analysis',
+                    f3: 'Continuous medical data updates',
+                },
+                faq: {
+                    title: 'Frequently Asked Questions',
+                    q1: 'How accurate is the AI?',
+                    a1: 'The system uses Gemini Pro Vision with high accuracy, but results are for reference only.',
+                    q2: 'Do I need to register?',
+                    a2: 'No, you can use basic features completely for free without login.',
+                    q3: 'Is my photo data secure?',
+                    a3: 'We do not store your photos after analysis. Data is processed anonymously.',
+                },
             },
             analyzer: {
                 title: 'Ingredient Analysis',
@@ -371,8 +398,6 @@ const resources = {
                     title: 'Analysis Failed',
                 },
                 result: {
-                    title: 'Analysis Result',
-                    points: 'points',
                     score: 'Rating Score',
                     scoreDesc: 'Overall safety and quality rating',
                     topIngredients: 'Top Ingredients (Highest Concentration)',
@@ -386,13 +411,8 @@ const resources = {
                     notable: 'Notable Ingredients',
                     fullList: 'Full Ingredient List',
                     ingredients: 'ingredients',
-                    ingredient: 'Ingredient',
-                    function: 'Function',
-                    safety: 'Safety',
-                    comedogenic: 'Comedogenic',
                 },
             },
-            lang: 'en',
             knowledge: {
                 title: 'Beauty Knowledge',
                 subtitle: 'Learn about cosmetic ingredients and skincare',
@@ -514,6 +534,7 @@ const resources = {
                     title2: 'que vous utilisez',
                     subtitle: 'Prenez une photo de la liste des ingrédients, l\'IA analysera la sécurité et fournira des recommandations pour votre peau.',
                     cta: 'Analyser maintenant',
+                    secondaryCta: 'En savoir plus',
                 },
                 stats: {
                     ingredients: 'Ingrédients analysés',
@@ -523,7 +544,7 @@ const resources = {
                 features: {
                     title: 'Pourquoi choisir SkinLab AI?',
                     subtitle: 'La technologie IA avancée vous aide à comprendre facilement les ingrédients cosmétiques',
-                    smart: {
+                    analysis: {
                         title: 'Reconnaissance intelligente',
                         desc: 'Prenez une photo des ingrédients, l\'IA lira et analysera automatiquement chacun d\'eux.',
                     },
@@ -569,6 +590,22 @@ const resources = {
                     subtitle: 'Pas d\'inscription requise, utilisation illimitée. Téléchargez simplement une photo et obtenez des résultats.',
                     button: 'Essayer maintenant',
                 },
+                tech: {
+                    title: 'Propulsé par une IA avancée',
+                    subtitle: 'Grand modèle de langage entraîné sur des millions de points de données',
+                    f1: 'Reconnaissance de texte précise à 99%',
+                    f2: 'Analyse contextuelle intelligente',
+                    f3: 'Mises à jour continues des données médicales',
+                },
+                faq: {
+                    title: 'Questions fréquentes',
+                    q1: 'Quelle est la précision de l\'IA?',
+                    a1: 'Le système utilise Gemini Pro Vision avec une haute précision, mais les résultats sont indicatifs.',
+                    q2: 'Dois-je m\'inscrire?',
+                    a2: 'Non, vous pouvez utiliser les fonctionnalités de base gratuitement sans connexion.',
+                    q3: 'Mes données photo sont-elles sécurisées?',
+                    a3: 'Nous ne stockons pas vos photos après analyse. Les données sont traitées de manière anonyme.',
+                },
             },
             analyzer: {
                 title: 'Analyse des ingrédients',
@@ -591,8 +628,6 @@ const resources = {
                     title: 'Échec de l\'analyse',
                 },
                 result: {
-                    title: 'Résultat d\'analyse',
-                    points: 'points',
                     score: 'Score d\'évaluation',
                     scoreDesc: 'Évaluation globale de sécurité et de qualité',
                     topIngredients: 'Ingrédients principaux (Concentration la plus élevée)',
@@ -606,13 +641,8 @@ const resources = {
                     notable: 'Ingrédients notables',
                     fullList: 'Liste complète des ingrédients',
                     ingredients: 'ingrédients',
-                    ingredient: 'Ingrédient',
-                    function: 'Fonction',
-                    safety: 'Sécurité',
-                    comedogenic: 'Comédogène',
                 },
             },
-            lang: 'fr',
             knowledge: {
                 title: 'Connaissances beauté',
                 subtitle: 'En savoir plus sur les ingrédients cosmétiques et les soins de la peau',
