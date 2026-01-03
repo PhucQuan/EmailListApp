@@ -1,0 +1,4 @@
+email\business\User.class
+email\data\UserDB.class
+com\mycompany\emaillistapp\EmailListApp.class
+email\view\EmailListServlet.class
